@@ -23,7 +23,6 @@ public class BaseTest {
     public  static ExtentReports extent;
     public static ExtentTest logger;
 
-
     @BeforeTest
     public void initializeReporter()
     {
@@ -70,14 +69,11 @@ public class BaseTest {
         }
         driver.quit();
     }
-
-
     @AfterTest
     public void cleanUp()
     {
         extent.flush();
     }
-
     public void setupDriver(){
         System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+File.separator+"drivers"+File.separator+"chromedriver");
         driver = new ChromeDriver();
